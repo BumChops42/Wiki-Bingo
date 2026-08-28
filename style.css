@@ -13,10 +13,24 @@
     text-align: center;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: NotoSerif;
 }
 
 h1 {
-    font-family: NotoSerif;
+    text-decoration: underline solid var(--highlight-colour) 3px;
+}
+
+div {
+    background-color: indigo;
 }
 
 iframe {
@@ -24,7 +38,11 @@ iframe {
 }
 
 #wiki-frame {
-    width: auto;
-    height: auto;
-    border: solid 2px var(--highlight-colour);
+    border: solid 3px var(--highlight-colour);
+    height: 600px;
+    width: 100%;
+}
+
+.col-md-6 {
+    padding: 1%;
 }
