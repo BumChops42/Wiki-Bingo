@@ -1,24 +1,30 @@
-/* Fonts */
-@font-face {
-  font-family: NotoSans;
-  src: url(fonts/NotoSans.ttf);
-}
+@font-face {font-family: NotoSans; src: url(fonts/NotoSans.ttf);}
+@font-face {font-family: NotoMono; src: url(fonts/NotoSansMono.ttf);}
+@font-face {font-family: NotoSerif; src: url(fonts/NotoSerif.ttf);}
 
-@font-face {
-  font-family: NotoMono;
-  src: url(fonts/NotoSansMono.ttf);
-}
-
-@font-face {
-  font-family: NotoSerif;
-  src: url(fonts/NotoSerif.ttf);
-}
+:root {
+    --bg-colour: #222222;
+    --text-colour: #ffffff;
+    --highlight-colour: #eb736a;
+}   
 
 * {
     font-family: NotoSans;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
     font-family: NotoSerif;
-    text-align: center;
+}
+
+iframe {
+    border: none;
+}
+
+#wiki-frame {
+    width: auto;
+    height: auto;
+    border: solid 2px var(--highlight-colour);
 }
