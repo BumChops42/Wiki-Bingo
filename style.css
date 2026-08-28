@@ -1,0 +1,24 @@
+/* Fonts */
+@font-face {
+  font-family: NotoSans;
+  src: url(fonts/NotoSans.ttf);
+}
+
+@font-face {
+  font-family: NotoMono;
+  src: url(fonts/NotoSansMono.ttf);
+}
+
+@font-face {
+  font-family: NotoSerif;
+  src: url(fonts/NotoSerif.ttf);
+}
+
+* {
+    font-family: NotoSans;
+}
+
+h1 {
+    font-family: NotoSerif;
+    text-align: center;
+}
