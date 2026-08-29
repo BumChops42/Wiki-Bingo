@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<div class="container-fluid d-flex flex-column" id="main-container">
+<div class="container-fluid min-vh-100 d-flex flex-column" id="main-container">
 	<div class="row">
 		<div class="col">
 			<h1>Wikipedia <span class="highlight-text">Bingo</span></h1>
@@ -33,7 +33,8 @@
 		</div>
 
 		<div class="col-md-6">
-			<div class="container-fluid min-vh-100 d-flex flex-column">
+
+			<div class="container-fluid d-flex flex-column" id="bingo-board">
 				<div class="row bingo-row-0">
 					<div class="col bingo-space bingo-column-0">1</div>
 					<div class="col bingo-space bingo-column-1">2</div>
@@ -69,6 +70,8 @@
 					<div class="col bingo-space bingo-column-3">24</div>
 					<div class="col bingo-space bingo-column-4">25</div>
 				</div>
+
+				<button id="next-article-button">Next Article</button>
 
 			</div>
 		</div>
