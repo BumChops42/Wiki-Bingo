@@ -3,34 +3,45 @@
 @font-face {font-family: NotoSerif; src: url(fonts/NotoSerif.ttf);}
 
 :root {
-    --bg-colour: #222222;
-    --text-colour: #ffffff;
-    --highlight-colour: #eb736a;
-}   
+    color-scheme: light dark;
+    --black: #222222;
+    --white: #ffffff;
+    --light-highlight: #eb736a;
+    --dark-highlight: #8d1646;
+    --bg-colour: light-dark(var(--white), var(--black));
+    --text-colour: light-dark(var(--black), var(--white));
+    --highlight-colour: light-dark(var(--dark-highlight), var(--light-highlight));
+    --alt-highlight-colour: light-dark(var(--light-highlight), var(--dark-highlight));
+    --border-width: 3px;
+}
 
 * {
-    font-family: NotoSans;
-    text-align: center;
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    font-family: NotoSans;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
 }
 
 body {
     background-color: var(--bg-colour);
     color: var(--text-colour);
+    padding: 3%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
     font-family: NotoSerif;
 }
 
-h1 {
-    text-decoration: underline solid var(--highlight-colour) 3px;
+h1, h1 * {
+    font-weight: 800;
+    text-decoration: underline solid var(--highlight-colour) var(--border-width);
+    vertical-align: top;
 }
 
-div {
-    background-color: indigo;
+.highlight-text {
+    color: var(--highlight-colour);
 }
 
 iframe {
@@ -42,15 +53,24 @@ iframe {
 }
 
 #wiki-frame {
-    border: solid 3px var(--highlight-colour);
-    height: 600px;
+    border: solid var(--border-width) var(--highlight-colour);
     width: 100%;
 }
 
-#bingo-board {
-    table-layout: fixed;
+.bingo-space {
+    word-wrap: break-word;
+    border-bottom: solid var(--border-width) var(--highlight-colour);
+    border-right: solid var(--border-width) var(--highlight-colour);
 }
 
-#bingo-board td {
-    height: 200%;
+.bingo-column-0 {
+    border-left: solid var(--border-width) var(--highlight-colour);
+}
+
+.bingo-row-0 div {
+    border-top: solid var(--border-width) var(--highlight-colour);
+}
+
+.bingo-space:hover {
+    font-weight: bold;
 }
