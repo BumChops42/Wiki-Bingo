@@ -8,15 +8,21 @@
     
     --black: #222222;
     --white: #ffffff;
-    --light-highlight: #eb736a;
-    --dark-highlight: #8d1646;
-    --light-alt-highlight: #6ae2eb;
-    --dark-alt-highlight: #16778d;
-
     --bg-colour: light-dark(var(--white), var(--black));
     --text-colour: light-dark(var(--black), var(--white));
+
+    --grey-1: #aaaaaa;
+    --grey-2: #444444;
+    --light-grey: light-dark(var(--grey-1), var(--grey-2));
+    --dark-grey: light-dark(var(--grey-2), var(--grey-1));
+
+    --light-highlight: #eb736a;
+    --dark-highlight: #8d1646;
     --light-highlight-colour: light-dark(var(--dark-highlight), var(--light-highlight));
     --dark-highlight-colour: light-dark(var(--light-highlight), var(--dark-highlight));
+
+    --light-alt-highlight: #6ae2eb;
+    --dark-alt-highlight: #16778d;
     --light-alt-highlight-colour: light-dark(var(--dark-alt-highlight), var(--light-alt-highlight));
     --dark-alt-highlight-colour: light-dark(var(--light-alt-highlight), var(--dark-alt-highlight));
 }
@@ -92,10 +98,33 @@ iframe {
     border-top: solid var(--border-width) var(--light-highlight-colour);
 }
 
+#bingo-board {
+    text-align: center;
+    align-content: center;
+}
+
+button {
+    border: solid var(--border-width) var(--light-highlight-colour);
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
+}
+
+#next-article-button {
+    width: 20%;
+    margin: 2% auto 0 auto;
+    font-weight: bolder;
+    background-color: var(--bg-colour);
+    transition: background-color 0.25s;
+}
+
 /* Animations & effects */
 
 .bingo-space:hover {
     font-weight: bold;
+}
+
+#next-article-button:hover {
+    background-color: var(--light-grey);
 }
 
 ::selection {
