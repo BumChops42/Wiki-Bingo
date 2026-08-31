@@ -4,15 +4,21 @@
 
 :root {
     color-scheme: light dark;
+    --border-width: 3px;
+    
     --black: #222222;
     --white: #ffffff;
     --light-highlight: #eb736a;
     --dark-highlight: #8d1646;
+    --light-alt-highlight: #6ae2eb;
+    --dark-alt-highlight: #16778d;
+
     --bg-colour: light-dark(var(--white), var(--black));
     --text-colour: light-dark(var(--black), var(--white));
-    --highlight-colour: light-dark(var(--dark-highlight), var(--light-highlight));
-    --alt-highlight-colour: light-dark(var(--light-highlight), var(--dark-highlight));
-    --border-width: 3px;
+    --light-highlight-colour: light-dark(var(--dark-highlight), var(--light-highlight));
+    --dark-highlight-colour: light-dark(var(--light-highlight), var(--dark-highlight));
+    --light-alt-highlight-colour: light-dark(var(--dark-alt-highlight), var(--light-alt-highlight));
+    --dark-alt-highlight-colour: light-dark(var(--light-alt-highlight), var(--dark-alt-highlight));
 }
 
 * {
@@ -38,12 +44,12 @@ h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 
 h1, h1 * {
     font-weight: 800;
-    text-decoration: underline solid var(--highlight-colour) var(--border-width);
+    text-decoration: underline solid var(--light-highlight-colour) var(--border-width);
     vertical-align: top;
 }
 
 .highlight-text {
-    color: var(--highlight-colour);
+    color: var(--light-highlight-colour);
 }
 
 iframe {
@@ -55,7 +61,7 @@ iframe {
 }
 
 #wiki-frame {
-    border: solid var(--border-width) var(--highlight-colour);
+    border: solid var(--border-width) var(--light-highlight-colour);
 }
 
 #wiki-frame, #bingo-board {
@@ -65,8 +71,8 @@ iframe {
 
 .bingo-space {
     align-content: center;
-    border-bottom: solid var(--border-width) var(--highlight-colour);
-    border-right: solid var(--border-width) var(--highlight-colour);
+    border-bottom: solid var(--border-width) var(--light-highlight-colour);
+    border-right: solid var(--border-width) var(--light-highlight-colour);
     font-size: large;
     font-weight: normal;
     padding: 1%;
@@ -79,15 +85,20 @@ iframe {
 }
 
 .bingo-column-0 {
-    border-left: solid var(--border-width) var(--highlight-colour);
+    border-left: solid var(--border-width) var(--light-highlight-colour);
 }
 
 .bingo-row-0 div {
-    border-top: solid var(--border-width) var(--highlight-colour);
+    border-top: solid var(--border-width) var(--light-highlight-colour);
 }
 
 /* Animations & effects */
 
 .bingo-space:hover {
     font-weight: bold;
+}
+
+::selection {
+    background-color: var(--light-alt-highlight-colour);
+    color: var(--bg-colour);
 }
