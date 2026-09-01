@@ -86,7 +86,7 @@ iframe {
     word-wrap: break-word;
 }
 
-.bingo-row-0, .bingo-row-1, .bingo-row-2, .bingo-row-3, .bingo-row-4 {
+.bingo-row {
     height: 100%;
 }
 
@@ -94,7 +94,7 @@ iframe {
     border-left: solid var(--border-width) var(--light-highlight-colour);
 }
 
-.bingo-row-0 div {
+#bingo-row-0 div {
     border-top: solid var(--border-width) var(--light-highlight-colour);
 }
 
