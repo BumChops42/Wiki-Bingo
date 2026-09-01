@@ -30,6 +30,7 @@
 			title="Random Wikipedia Page"
 			src="https://en.wikipedia.org/wiki/Special:Random">
 			</iframe>
+			<img src="https://i.postimg.cc/nrmSsgJj/real-mao-quote.png" id="bingo-image" hidden="true">
 		</div>
 
 		<div class="col-md-6">
@@ -71,7 +72,10 @@
 					<div class="col bingo-space bingo-column-4" onclick="toggleSpace(4, 4);" data-selected="false">25</div>
 				</div>
 
-				<button id="next-article-button" onclick="refreshWikiFrame()">Next Article</button>
+				<div class="row flex-grow-1" id="button-row">
+					<button class="col" id="next-article-button" onclick="refreshWikiFrame()">Next Article</button>
+					<button class="col" id="new-board-button" onclick="makeBingoBoard()">New Bingo Board</button>
+				</div>
 
 			</div>
 		</div>

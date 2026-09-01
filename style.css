@@ -66,7 +66,7 @@ iframe {
     padding: 1%;
 }
 
-#wiki-frame {
+#wiki-frame, img {
     border: solid var(--border-width) var(--light-highlight-colour);
 }
 
@@ -109,12 +109,23 @@ button {
     color: var(--text-colour);
 }
 
-#next-article-button {
+button {
     width: 20%;
-    margin: 2% auto 0 auto;
     font-weight: bolder;
     background-color: var(--bg-colour);
     transition: background-color 0.25s;
+}
+
+#button-row {
+    margin-top: 1%;
+}
+
+#next-article-button {
+    margin-right: 1%;
+}
+
+#new-board-button {
+    margin-left: 1%;
 }
 
 /* Animations & effects */
@@ -123,7 +134,7 @@ button {
     font-weight: bold;
 }
 
-#next-article-button:hover {
+button:hover {
     background-color: var(--light-grey);
 }
 
