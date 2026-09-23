@@ -35,7 +35,9 @@ const NUM_COLUMNS = NUM_ROWS;
 
 let hasAlerted = false;
 
-window.onload = makeBingoBoard
+addEventListener("load", (event) => {
+    makeBingoBoard()
+})
 
 function makeBingoBoard() {
     const spaces = DEFAULT_BINGO_SPACES.split("\n");
@@ -53,11 +55,13 @@ function makeBingoBoard() {
 
             const rowDiv = document.querySelector("#bingo-row-"+j.toString());
             const cellDiv = rowDiv.querySelector(".bingo-column-"+i.toString());
-
+            
+            console.log(spaceContent)
             cellDiv.innerHTML = spaceContent;
         }
     }
     hasAlerted = false;
+    checkBingo()
 }
 
 function refreshWikiFrame() {
